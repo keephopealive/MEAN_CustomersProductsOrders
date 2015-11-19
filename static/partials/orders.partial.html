@@ -1,0 +1,23 @@
+<h1>Orders Partial</h1>
+
+<form>
+	<select ng-model="ordersCtrl.customer">
+		<option ng-repeat="customer in ordersCtrl.customers" ng-value="customer._id">{{customer.name}}</option>
+	</select>
+
+	<li ng-repeat="product in ordersCtrl.products">
+		<input type="checkbox" ng-model="product.isSelected">
+		<span ng-bind="product.title"></span>
+	</li>
+
+	<input type="submit" ng-click="ordersCtrl.create(ordersCtrl.customer, ordersCtrl.products)">
+</form>
+
+<div ng-repeat="order in ordersCtrl.orders">
+	<h3 ng-bind="order.customer.name"></h3>	
+	<li ng-repeat="product in order.products">
+		<h4 ng-bind="product.title"></h4>
+	</li>
+	<button ng-click="ordersCtrl.destroy(order._id)">Delete Order</button>
+	
+</div>

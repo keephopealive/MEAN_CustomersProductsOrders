@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='myApp'>
+<head>
+	<meta charset="UTF-8">
+	<title>Index</title>
+	<script type="text/javascript" src="/js/lib/angular.js"></script>
+	<script type="text/javascript" src="/js/lib/angularRoutes.js"></script>
+	<script type="text/javascript" src="/js/angular/myApp.angular.js"></script>
+	<script type="text/javascript" src="/js/angular/customers/customers.ctrl.js"></script>
+	<script type="text/javascript" src="/js/angular/customers/customer.factory.js"></script>
+	<script type="text/javascript" src="/js/angular/orders/orders.ctrl.js"></script>
+	<script type="text/javascript" src="/js/angular/orders/order.factory.js"></script>
+	<script type="text/javascript" src="/js/angular/products/products.ctrl.js"></script>
+	<script type="text/javascript" src="/js/angular/products/product.factory.js"></script>
+</head>
+<body>
+	
+	<a href="#/customers">Customers</a>
+	<a href="#/products">Products</a>
+	<a href="#/orders">Orders</a>
+	<div ng-view></div>
+
+</body>
+</html>
